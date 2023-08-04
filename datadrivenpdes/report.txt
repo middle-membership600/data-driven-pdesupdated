@@ -1,0 +1,222 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 23 files
+Detected 4 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: core/builders.py
+--------------------------------------------------------------------------------
+core/builders.py:36:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: core/integrate.py
+--------------------------------------------------------------------------------
+core/integrate.py:24:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+core/integrate.py:25:6: ERROR: Using member tf.contrib.compiler.xla in deprecated module tf.contrib. tf.contrib.compiler.xla cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: core/integration_test.py
+--------------------------------------------------------------------------------
+core/integration_test.py:31:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'core/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'core/builders.py'
+ outputting to 'core_upgraded/builders.py'
+--------------------------------------------------------------------------------
+
+36:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+80:14: INFO: Renamed 'tf.contrib.framework.nest.map_structure' to 'tf.nest.map_structure'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/models_test.py'
+ outputting to 'core_upgraded/models_test.py'
+--------------------------------------------------------------------------------
+
+33:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+69:27: INFO: tf.initializers.ones requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+69:27: INFO: Renamed 'tf.initializers.ones' to 'tf.compat.v1.initializers.ones'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/readers.py'
+ outputting to 'core_upgraded/readers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/grids.py'
+ outputting to 'core_upgraded/grids.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/builders_test.py'
+ outputting to 'core_upgraded/builders_test.py'
+--------------------------------------------------------------------------------
+
+22:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/utils_test.py'
+ outputting to 'core_upgraded/utils_test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/models.py'
+ outputting to 'core_upgraded/models.py'
+--------------------------------------------------------------------------------
+
+535:41: INFO: Renamed keyword argument for tf.reduce_max from keep_dims to keepdims
+536:41: INFO: Renamed keyword argument for tf.reduce_min from keep_dims to keepdims
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/tensor_ops.py'
+ outputting to 'core_upgraded/tensor_ops.py'
+--------------------------------------------------------------------------------
+
+30:11: INFO: Renamed 'tf.contrib.framework.nest.map_structure' to 'tf.nest.map_structure'
+188:14: INFO: Renamed 'tf.extract_image_patches' to 'tf.image.extract_patches'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/__init__.py'
+ outputting to 'core_upgraded/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/geometry_test.py'
+ outputting to 'core_upgraded/geometry_test.py'
+--------------------------------------------------------------------------------
+
+26:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/integrate.py'
+ outputting to 'core_upgraded/integrate.py'
+--------------------------------------------------------------------------------
+
+24:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+25:6: ERROR: Using member tf.contrib.compiler.xla in deprecated module tf.contrib. tf.contrib.compiler.xla cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+79:16: INFO: Added keywords to args of function 'tf.while_loop'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/polynomials.py'
+ outputting to 'core_upgraded/polynomials.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/integrate_test.py'
+ outputting to 'core_upgraded/integrate_test.py'
+--------------------------------------------------------------------------------
+
+27:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/states_test.py'
+ outputting to 'core_upgraded/states_test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/utils.py'
+ outputting to 'core_upgraded/utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/geometry.py'
+ outputting to 'core_upgraded/geometry.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/grids_test.py'
+ outputting to 'core_upgraded/grids_test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/polynomials_test.py'
+ outputting to 'core_upgraded/polynomials_test.py'
+--------------------------------------------------------------------------------
+
+25:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/equations.py'
+ outputting to 'core_upgraded/equations.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/states.py'
+ outputting to 'core_upgraded/states.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/tensor_ops_test.py'
+ outputting to 'core_upgraded/tensor_ops_test.py'
+--------------------------------------------------------------------------------
+
+27:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+42:18: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+43:19: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/integration_test.py'
+ outputting to 'core_upgraded/integration_test.py'
+--------------------------------------------------------------------------------
+
+31:7: ERROR: Using member tf.contrib.framework.nest in deprecated module tf.contrib. tf.contrib.framework.nest cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+35:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+84:28: INFO: Renamed 'tf.keras.optimizers.Adam' to 'tf.keras.optimizers.legacy.Adam'
+117:28: INFO: Renamed 'tf.keras.optimizers.Adam' to 'tf.keras.optimizers.legacy.Adam'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'core/readers_test.py'
+ outputting to 'core_upgraded/readers_test.py'
+--------------------------------------------------------------------------------
+
+33:0: INFO: Renamed 'tf.enable_eager_execution' to 'tf.compat.v1.enable_eager_execution'
+--------------------------------------------------------------------------------
+
