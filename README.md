@@ -13,6 +13,23 @@ This is not an official Google product.
 
 # Installation
 
+## Modified Setup
+
+### Conda Environment
+
+1. Create a new conda environment:
+    ```bash
+    conda env create -f environment.yml
+    ```
+
+2. Once the environment is created, activate it:
+    ```bash
+    conda activate myenv
+    ```
+
+3. You should now be in the newly created conda environment, and have access to all the dependencies required to run the code in this repository.
+
+
 Installation is most easily done using pip.
 1. Create or activate a virtual environment (e.g. using `virtualenv` or `conda`).
 2. [Install TensorFlow](https://www.tensorflow.org/install/pip).
