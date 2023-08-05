@@ -15,6 +15,8 @@ This is not an official Google product.
 
 ## Modified Setup
 
+Using the Conda environment is especially important for those with M1 Macs.
+
 ### Conda Environment
 
 1. Create a new conda environment:
@@ -27,7 +29,7 @@ This is not an official Google product.
     conda activate myenv
     ```
 
-3. You should now be in the newly created conda environment, and have access to all the dependencies required to run the code in this repository.
+3. You should now be in the newly created conda environment, and have access to all the dependencies required to run the code in this repository. Continue to next part of installation to ensure all the dependencies are installed.
 
 
 Installation is most easily done using pip.
